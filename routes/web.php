@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,16 +13,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::get('/ola' , function(){
-	echo 'Olá Mundo!!';
-});
-
-Route::get('/series', 'SeriesController@index');
-Route::get('/series/criar','SeriesController@create');
-Route::post('/series/criar','SeriesController@store');
+Route::get('/series','SeriesController@index');
+Route::get('/series/criar', 'SeriesController@create');
 
